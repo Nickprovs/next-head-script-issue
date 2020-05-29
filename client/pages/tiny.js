@@ -20,7 +20,8 @@ class Tiny extends Component {
 
   render() {
     const { mounted } = this.state;
-    this.clientSideValidateTinyMceScriptExists();
+
+    if (mounted) this.clientSideValidateTinyMceScriptExists();
     return (
       <div>
         <Head>
